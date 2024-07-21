@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste soma</title>
+</head>
+<body>
+    <form onsubmit="envioform(); return false;"> <!--Quando o formulário for enviado ele chama a função "envioform()"-->
+        <fieldset>
+            <legend>Soma de números</legend>
+            <label for="numero1">Digite o primeiro número:</label>
+            <input type="number" id="numero1"><br>
+            <label for="numero2">Digite o segundo número:</label>
+            <input type="number" id="numero2" style="margin-left: 3px;">
+        </fieldset>
+        <button type="submit" onsubmit="envioform" style="border-radius: 5px; border: 2px solid black;">Enviar</button>
+
+        <script>
+            function envioform(){ //Envia o formulário para somar os números digitados pelo usuário
+                function soma(a, b){
+                    return a + b;
+                 }
+                 let result = soma(Number(document.getElementById('numero1').value), Number(document.getElementById('numero2').value))
+                 window.alert(`A soma dos dois números é: ${result}`)
+            }
+
+            //Linha para teste
+        </script>
+
+    </form>
+</body>
+</html>
